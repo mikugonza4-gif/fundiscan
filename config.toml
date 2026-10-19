@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#f97316"
+[server]
+maxUploadSize = 10
+[client]
+showErrorDetails = false
