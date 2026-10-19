@@ -4,7 +4,7 @@ Prototipo educativo de inspección visual de impulsores de fundición: clasifica
 
 Certamen I · IA Generativa para la Gestión Industrial · UDD.
 
-**Integrantes:** completar con los tres nombres antes de entregar.
+**Integrantes:** Miguel González - Sebastián Muñoz - Renato Valdés
 
 **App pública:** agregar el enlace de Streamlit una vez publicado.
 
