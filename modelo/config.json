@@ -1,0 +1,91 @@
+{
+  "arquitectura": "efficientnet_b0",
+  "clases": [
+    "conforme",
+    "defectuosa"
+  ],
+  "clase_positiva": "defectuosa",
+  "tam": 224,
+  "media": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "desv": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "umbral": 0.1,
+  "costos": {
+    "falso_negativo": 20,
+    "falso_positivo": 1
+  },
+  "metricas_prueba": {
+    "accuracy": 0.9888111888111888,
+    "accuracy_balanceada": 0.9871467569890299,
+    "recall_defectuosa": 0.9933774834437086,
+    "precision_defectuosa": 0.989010989010989,
+    "defectuosas_no_detectadas": 3,
+    "falsas_alarmas": 5
+  },
+  "matriz_confusion": [
+    [
+      257,
+      5
+    ],
+    [
+      3,
+      450
+    ]
+  ],
+  "n_prueba": 715,
+  "comparacion": {
+    "A · CLIP sin entrenar": {
+      "accuracy": 0.5244755244755245,
+      "accuracy_balanceada": 0.6239194176229715,
+      "recall_defectuosa": 0.25165562913907286,
+      "precision_defectuosa": 0.991304347826087,
+      "defectuosas_no_detectadas": 339,
+      "falsas_alarmas": 1,
+      "ms_por_imagen": 25.2,
+      "tamano_MB": 605.0
+    },
+    "B · EfficientNet-B0 (timm)": {
+      "accuracy": 0.9944055944055944,
+      "accuracy_balanceada": 0.9955849889624724,
+      "recall_defectuosa": 0.9911699779249448,
+      "precision_defectuosa": 1.0,
+      "defectuosas_no_detectadas": 4,
+      "falsas_alarmas": 0,
+      "ms_por_imagen": 12.3,
+      "tamano_MB": 16.3
+    },
+    "C · YOLO11n-cls (ultralytics)": {
+      "accuracy": 0.9972027972027973,
+      "accuracy_balanceada": 0.9977924944812362,
+      "recall_defectuosa": 0.9955849889624724,
+      "precision_defectuosa": 1.0,
+      "defectuosas_no_detectadas": 2,
+      "falsas_alarmas": 0,
+      "ms_por_imagen": 7.0,
+      "tamano_MB": 3.2
+    }
+  },
+  "conteo": {
+    "train": {
+      "conforme": 2443,
+      "defectuosa": 3194
+    },
+    "val": {
+      "conforme": 432,
+      "defectuosa": 564
+    },
+    "test": {
+      "conforme": 262,
+      "defectuosa": 453
+    }
+  },
+  "dataset": "https://www.kaggle.com/datasets/ravirajsinh45/real-life-industrial-dataset-of-casting-product",
+  "fecha_entrenamiento": "2026-10-14"
+}
